@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Converter Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Video Converter Service</h1>
+    <div id="login-section">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="upload-section" style="display: none;">
+        <h2>Upload Video</h2>
+        <input type="file" id="videoFile">
+        <button onclick="uploadVideo()">Upload</button>
+    </div>
+    <div id="download-section" style="display: none;">
+        <h2>Download MP3</h2>
+        <input type="text" id="fileId" placeholder="File ID">
+        <button onclick="downloadMp3()">Download</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

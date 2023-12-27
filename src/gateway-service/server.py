@@ -6,8 +6,10 @@ from auth_svc import access
 from storage import util
 from bson.objectid import ObjectId
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from flask_cors import CORS
 
 server = Flask(__name__)
+CORS(server)
 
 mongo_video = PyMongo(server, uri=os.environ.get('MONGODB_VIDEOS_URI'))
 

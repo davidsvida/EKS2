@@ -1,8 +1,10 @@
 import jwt, datetime, os
 import psycopg2
 from flask import Flask, request
+from flask_cors import CORS
 
 server = Flask(__name__)
+CORS(server)
 
 def get_db_connection():
     conn = psycopg2.connect(host=os.getenv('DATABASE_HOST'),
